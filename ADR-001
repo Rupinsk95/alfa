@@ -1,0 +1,11 @@
+Images tagging strategy
+
+dev-<sha>, stg-<sha>, prod<-sha>
+
+dev-Development means new feature is being build.
+stg-Staging means the feature is finished and it is being tested in environment similar to production.
+prod-Production means finals environment where the app is working.
+
+Sha means hash of particular commit.
+
+Unique hash-> safe deployment-> easy to differ

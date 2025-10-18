@@ -1,0 +1,5 @@
+flowchart LR
+    A[Developer] -->|push code| B[CI Pipeline]
+    B -->|build Docker image| C[Docker Registry]
+    C -->|push image| D[Deployment]
+    D --> E[Staging / Production]
