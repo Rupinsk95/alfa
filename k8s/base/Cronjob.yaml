@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: status-writer
+spec:
+  schedule: "*/1 * * * *" 
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: writer
+            image: busybox
+            command:
+              - /bin/sh
+              - -c
+              - |
+                echo "Status zapisany o $(date)" >> /data/status.txt
+            volumeMounts:
+            - name: status-volume
+              mountPath: /data
+          restartPolicy: OnFailure
+          volumes:
+          - name: status-volume
+            emptyDir: {}
