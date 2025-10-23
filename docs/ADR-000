@@ -1,0 +1,13 @@
+# 001 - Cluster choice
+
+Status: Accepted
+
+## Context
+We need a cluster to prepare the project.
+
+## Decyzja
+I decided to use GCP.
+
+## Consequences
+- Pluses: similar to real-life scenario, I already know the basics
+- Minuses: My trial has ended so I will need to create a new account
