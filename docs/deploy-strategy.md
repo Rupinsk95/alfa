@@ -12,3 +12,16 @@ kubectl port-forward deployment/nginx-green 8081:80
 curl http://localhost:8081 -> test green bez przelaczania svc
 5. Zmiana version w svc z blue na green i wdrozenie go
 6. Jesli wszystko dziala usuniecie blue
+---
+Canary-
+1. Mamy sobie glowny deploy dzialajacy poprawnie i stabilnie np 5 replik
+2. Wdrazamy canary z np 1 replika (czyli 20%)
+3. Sprawdzamy czy pod dziala (readiness, livensess,logi,describe)
+4. Zwiekszamy canary np do 40-60 procent
+5. Jesli wszystko dziala to usuwamy stary deploy
+
+Kryteria: 
+-wszystkie canary pody ready
+-brak bledow przez 10 min 
+-smoke test poprawny-mozna wejsc na strone --->roll forward
+
