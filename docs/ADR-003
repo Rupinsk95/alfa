@@ -1,0 +1,23 @@
+Decision:
+I chose the ingress-nginx chart to deploy an Ingress Controller in the cluster.
+
+Why this chart:
+
+it’s the most popular and stable option,
+
+works on any Kubernetes cluster,
+
+easy to configure,
+
+well-supported and well-documented.
+
+Key values in values.yaml:
+
+controller.replicaCount: 2 -> high availability,
+
+controller.service.type: LoadBalancer -> external access,
+
+resources -> CPU/RAM limits for stability,
+
+Consequences:
+The Ingress Controller is stable, and ready to handle external traffic.

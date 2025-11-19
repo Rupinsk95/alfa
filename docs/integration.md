@@ -1,0 +1,1 @@
+The app uses the ingress- nginx controller to handle external traffic. We create an Ingress resource that maps a host and path to the app’s Service. The Ingress Controller routes requests to the correct pods, so the app only needs a ClusterIP service. This allows stable, secure, and monitored access without exposing pods directly.
