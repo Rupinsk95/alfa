@@ -1,0 +1,7 @@
+resources:
+  - ../../base
+
+patches:
+  - patch-replicas.yaml
+  - patch-image.yaml
+  - patch-limits.yaml
